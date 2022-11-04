@@ -358,7 +358,7 @@ qubitLocs[#]+=v&/@Flatten[{q}]
 ,
 NoisyForm-> {}
 ,
-GateDuration->\[Pi]/config[\[CapitalOmega]]
+GateDuration->v[[1]]/0.5
 |>
 ,
 Subscript[CZ, p_Integer,q_Integer][\[Phi]_]/;blockadeCheck[{p,q}]:><|
