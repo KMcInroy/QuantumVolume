@@ -12,6 +12,7 @@ NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 NotebookDataLength[    184962,       3359]
 NotebookOptionsPosition[    182097,       3310]
 NotebookOutlinePosition[    182578,       3328]
@@ -19,11 +20,16 @@ CellTagsIndexPosition[    182535,       3325]
 =======
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 NotebookDataLength[     85716,       1684]
 NotebookOptionsPosition[     84140,       1651]
 NotebookOutlinePosition[     84606,       1669]
 CellTagsIndexPosition[     84563,       1666]
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
@@ -88,6 +94,7 @@ Cell[BoxData[
     "CreateLocalQuESTEnv", "[", 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\quest_link.exe\>\"", "]"}], 
     ";", 
     RowBox[{"(*", 
@@ -112,6 +119,16 @@ Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}],
    RowBox[{
     RowBox[{
     "Import", "[", 
+=======
+     "\"\</Users/questuser/Documents/Kathryn/quest_link\>\"", "]"}], ";"}], 
+   " ", 
+   RowBox[{"(*", 
+    RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
      "\"\</Users/questuser/Documents/Kathryn/quest_link\>\"", "]"}], ";"}], 
    " ", 
@@ -162,6 +179,9 @@ Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}],
        "\"\<C:\\\\Users\\\\KitKa\\\\OneDrive\\\\Documents\\\\Wolfram \
 Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], "*)"}], 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
@@ -441,10 +461,13 @@ Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], "*)"}],
    3.8768377618432245`*^9}, {3.876838123775058*^9, 3.8768381245103426`*^9}, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    3.8768408594353733`*^9, 3.876840869958505*^9}, {3.876915709284512*^9, 
    3.8769157208416815`*^9}},
  CellLabel->"In[49]:=",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
 =======
+=======
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
    3.8768408594353733`*^9, 3.876840869958505*^9}, {3.876841130790636*^9, 
@@ -3423,6 +3446,7 @@ Notebook[{
 Cell[CellGroupData[{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Cell[580, 22, 17755, 344, 801, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
 Cell[18338, 368, 94296, 1538, 309, 590, 10, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"d74d292a-6ffb-421d-8634-c63c82940e2a"]
 }, Open  ]],
@@ -3465,6 +3489,14 @@ Cell[CellGroupData[{
 Cell[22595, 437, 57109, 1082, 1810, "Input",ExpressionUUID->"0d30743d-14ee-4695-80b8-af268c115cbf"],
 Cell[CellGroupData[{
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
+Cell[580, 22, 17752, 346, 885, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
+Cell[18335, 370, 4223, 62, 311, "Output",ExpressionUUID->"c1bda623-d7fb-4387-b828-825ef0fa15f0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22595, 437, 57109, 1082, 1810, "Input",ExpressionUUID->"0d30743d-14ee-4695-80b8-af268c115cbf"],
+Cell[CellGroupData[{
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 Cell[79729, 1523, 365, 8, 21, "Print",ExpressionUUID->"4768be6c-93f5-47ca-a5e7-789646822c01"],
 Cell[80097, 1533, 363, 8, 21, "Print",ExpressionUUID->"6146455c-ea4d-4a31-be0b-d8faa06e999c"],
 Cell[80463, 1543, 365, 8, 21, "Print",ExpressionUUID->"6c8d16c1-a352-4f28-a17c-5c9e73d5bcf9"],
@@ -3475,6 +3507,9 @@ Cell[81933, 1583, 363, 8, 21, "Print",ExpressionUUID->"ac73adb9-cf80-48cc-b576-3
 Cell[82299, 1593, 363, 8, 21, "Print",ExpressionUUID->"b589075b-7281-4a4a-9978-e23b5f8613f9"],
 Cell[82665, 1603, 1447, 44, 36, "Print",ExpressionUUID->"5d12ee4b-308c-4303-adbb-a7449ce01212"]
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc

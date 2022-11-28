@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 (* ::Package:: *)
 
 Needs["QuEST`"]
@@ -420,6 +421,8 @@ randU=Table[RandomVariate[CircularUnitaryMatrixDistribution[2^nqubits]],{Min[2^n
 =======
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 (* ::Package:: *)
 
 Needs["QuEST`"]
@@ -838,6 +841,9 @@ randU=Table[RandomVariate[CircularUnitaryMatrixDistribution[2^nqubits]],{Min[2^n
 (Total@randU) . (Total[ConjugateTranspose[#]&/@randU])/Tr[(Total@randU) . (Total[ConjugateTranspose[#]&/@randU])]
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
+=======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 =======
 >>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
