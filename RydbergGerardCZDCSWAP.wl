@@ -245,7 +245,7 @@ InitLocations-> PlotAtoms[config[QubitLocations]],
 
 (* re-initialized when invoking InsertCircuitNoise *)
 InitVariables->Function[
-	qubitLocs=config[QubitLocations];
+	(*qubitLocs=config[QubitLocations];*)
 	blockadeRadius=config[BlockadeRadius];
 	unitLattice=config[UnitLattice];
 ]

@@ -10,10 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
+<<<<<<< HEAD
 NotebookDataLength[    184962,       3359]
 NotebookOptionsPosition[    182097,       3310]
 NotebookOutlinePosition[    182578,       3328]
 CellTagsIndexPosition[    182535,       3325]
+=======
+NotebookDataLength[     85716,       1684]
+NotebookOptionsPosition[     84140,       1651]
+NotebookOutlinePosition[     84606,       1669]
+CellTagsIndexPosition[     84563,       1666]
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -73,6 +80,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{
     "CreateLocalQuESTEnv", "[", 
+<<<<<<< HEAD
      "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\quest_link.exe\>\"", "]"}], 
     ";", 
     RowBox[{"(*", 
@@ -88,6 +96,55 @@ Cell[BoxData[
      "Import", "[", 
       "\"\<C:\\\\Users\\\\KitKa\\\\OneDrive\\\\Documents\\\\Wolfram \
 Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], 
+=======
+     "\"\</Users/questuser/Documents/Kathryn/quest_link\>\"", "]"}], ";"}], 
+   " ", 
+   RowBox[{"(*", 
+    RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\</Users/questuser/Documents/Kathryn/RydbergGerardCZDCSWAP.wl\>\"", 
+     "]"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Configuration", " ", "File"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"data", "=", 
+     RowBox[{
+     "Import", "[", 
+      "\"\</Users/questuser/Documents/Kathryn/SU4Gates9Qubits.csv\>\"", 
+      "]"}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Imported", " ", "gates", " ", "from", " ", "Qiskit"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\Link\\\\QuESTlink.m\>\"", 
+       "]"}], " ", 
+      RowBox[{"(*", 
+       RowBox[{"QuESTlink", " ", "load"}], "*)"}], "\n", 
+      RowBox[{
+      "CreateLocalQuESTEnv", "[", 
+       "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\quest_link.exe\>\"", "]"}]}],
+      ";", 
+     RowBox[{"(*", 
+      RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+     RowBox[{
+     "Import", "[", 
+      "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\RydbergInstaSwapGerardCZ.wl\>\
+\"", "]"}], ";", 
+     RowBox[{"(*", 
+      RowBox[{"Configuration", " ", "File"}], "*)"}], 
+     RowBox[{"data", "=", 
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\KitKa\\\\OneDrive\\\\Documents\\\\Wolfram \
+Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], "*)"}], 
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"userconfig", "=", 
@@ -362,20 +419,31 @@ Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}],
    3.876598936091878*^9}, {3.8765989780656643`*^9, 3.876598980559504*^9}, {
    3.876834874566763*^9, 3.8768349666916876`*^9}, {3.876837717860126*^9, 
    3.8768377618432245`*^9}, {3.876838123775058*^9, 3.8768381245103426`*^9}, {
+<<<<<<< HEAD
    3.8768408594353733`*^9, 3.876840869958505*^9}, {3.876915709284512*^9, 
    3.8769157208416815`*^9}},
  CellLabel->"In[49]:=",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
+=======
+   3.8768408594353733`*^9, 3.876840869958505*^9}, {3.876841130790636*^9, 
+   3.8768411621258497`*^9}},ExpressionUUID->"30d941c4-c74d-4019-8d8c-\
+c4d11a9d026a"],
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 
 Cell[BoxData[
  Graphics3DBox[{{SphereBox[{0, 0, 0}, 0.1], SphereBox[{0, 1, 0}, 0.1], 
     SphereBox[{1, 0, 0}, 0.1], SphereBox[{1, 1, 0}, 0.1], 
     SphereBox[{0, 2, 0}, 0.1], SphereBox[{1, 2, 0}, 0.1], 
     SphereBox[{2, 0, 0}, 0.1], SphereBox[{2, 1, 0}, 0.1], 
-    SphereBox[{2, 2, 0}, 0.1]}, {Text3DBox["0", {0, 0, 0}], 
-    Text3DBox["1", {0, 1, 0}], Text3DBox["2", {1, 0, 0}], 
-    Text3DBox["3", {1, 1, 0}], Text3DBox["4", {0, 2, 0}], 
-    Text3DBox["5", {1, 2, 0}], Text3DBox["6", {2, 0, 0}], 
-    Text3DBox["7", {2, 1, 0}], Text3DBox["8", {2, 2, 0}]}},
+    SphereBox[{2, 2, 0}, 0.1]}, {Text3DBox[
+     FormBox["0", StandardForm], {0, 0, 0}], Text3DBox[
+     FormBox["1", StandardForm], {0, 1, 0}], Text3DBox[
+     FormBox["2", StandardForm], {1, 0, 0}], Text3DBox[
+     FormBox["3", StandardForm], {1, 1, 0}], Text3DBox[
+     FormBox["4", StandardForm], {0, 2, 0}], Text3DBox[
+     FormBox["5", StandardForm], {1, 2, 0}], Text3DBox[
+     FormBox["6", StandardForm], {2, 0, 0}], Text3DBox[
+     FormBox["7", StandardForm], {2, 1, 0}], Text3DBox[
+     FormBox["8", StandardForm], {2, 2, 0}]}},
   ImageSize->500]], "Output",
  CellChangeTimes->{{3.869764201891713*^9, 3.8697642099490824`*^9}, 
    3.869764353200732*^9, 3.869764867445258*^9, {3.8697658404431267`*^9, 
@@ -2505,6 +2573,7 @@ Cell[BoxData[{
         RowBox[{"Print", "[", "PoutcomesNoisy", "]"}], ";"}], "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"InitZeroState", "[", "Reg", "]"}], ";", "\[IndentingNewLine]", 
+      
       RowBox[{"(*", 
        RowBox[{
         RowBox[{"Print", "[", 
@@ -2610,6 +2679,7 @@ Cell[BoxData[{
         RowBox[{"NQ", ",", 
          RowBox[{"MHOP", "\[PlusMinus]", 
           RowBox[{"2", "\[Sigma]"}]}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+      
       RowBox[{"{", 
        RowBox[{"NQ", ",", "2", ",", "MaxNQ", ",", "1"}], "}"}]}], "]"}]}], 
    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -3308,11 +3378,11 @@ Cell[BoxData["24"], "Output",
   "Out[107]=",ExpressionUUID->"809685d0-256b-4974-b69e-ba7739788d7c"]
 }, Open  ]]
 },
-WindowSize->{1140.6, 574.8},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-TaggingRules->Association["TryRealOnly" -> False],
+WindowSize->{1141, 575},
+WindowMargins->{{0, Automatic}, {-62, Automatic}},
+TaggingRules-><|"TryRealOnly" -> False|>,
 Magnification:>0.9 Inherited,
-FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"33754151-c21a-49a6-8d61-5dd1a1518ac2"
 ]
@@ -3328,6 +3398,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
+<<<<<<< HEAD
 Cell[580, 22, 17755, 344, 801, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
 Cell[18338, 368, 94296, 1538, 309, 590, 10, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"d74d292a-6ffb-421d-8634-c63c82940e2a"]
 }, Open  ]],
@@ -3355,6 +3426,23 @@ Cell[178594, 3209, 479, 9, 21, "Print",ExpressionUUID->"cfad9eda-bacc-4176-901c-
 Cell[179076, 3220, 410, 7, 19, "Print",ExpressionUUID->"c959b2f2-f55a-4b3f-8369-34e48f8ad396"],
 Cell[179489, 3229, 479, 9, 21, "Print",ExpressionUUID->"7cb99214-648d-4f82-b75a-9f7ad3364699"],
 Cell[179971, 3240, 1585, 49, 36, "Print",ExpressionUUID->"c99ccf5e-8aa8-40af-92a1-ba0d43cc82da"]
+=======
+Cell[580, 22, 17752, 346, 885, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
+Cell[18335, 370, 4223, 62, 311, "Output",ExpressionUUID->"c1bda623-d7fb-4387-b828-825ef0fa15f0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22595, 437, 57109, 1082, 1810, "Input",ExpressionUUID->"0d30743d-14ee-4695-80b8-af268c115cbf"],
+Cell[CellGroupData[{
+Cell[79729, 1523, 365, 8, 21, "Print",ExpressionUUID->"4768be6c-93f5-47ca-a5e7-789646822c01"],
+Cell[80097, 1533, 363, 8, 21, "Print",ExpressionUUID->"6146455c-ea4d-4a31-be0b-d8faa06e999c"],
+Cell[80463, 1543, 365, 8, 21, "Print",ExpressionUUID->"6c8d16c1-a352-4f28-a17c-5c9e73d5bcf9"],
+Cell[80831, 1553, 365, 8, 21, "Print",ExpressionUUID->"cfa706b7-dcb2-4212-94e3-1e36678de021"],
+Cell[81199, 1563, 363, 8, 21, "Print",ExpressionUUID->"ec695a75-41cb-4ca7-a212-cf5d755ba54a"],
+Cell[81565, 1573, 365, 8, 21, "Print",ExpressionUUID->"be2306bd-58f2-4bda-b3be-fa9230c448a9"],
+Cell[81933, 1583, 363, 8, 21, "Print",ExpressionUUID->"ac73adb9-cf80-48cc-b576-3611de2bd476"],
+Cell[82299, 1593, 363, 8, 21, "Print",ExpressionUUID->"b589075b-7281-4a4a-9978-e23b5f8613f9"],
+Cell[82665, 1603, 1447, 44, 36, "Print",ExpressionUUID->"5d12ee4b-308c-4303-adbb-a7449ce01212"]
+>>>>>>> 61d74736b18f6b10fc265fd3a3bb255cdf1f17fc
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
