@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     85421,       1673]
-NotebookOptionsPosition[     83829,       1640]
-NotebookOutlinePosition[     84310,       1658]
-CellTagsIndexPosition[     84267,       1655]
+NotebookDataLength[     85716,       1684]
+NotebookOptionsPosition[     84140,       1651]
+NotebookOutlinePosition[     84606,       1669]
+CellTagsIndexPosition[     84563,       1666]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,51 +43,55 @@ Cell[BoxData[
    RowBox[{
     RowBox[{
     "CreateLocalQuESTEnv", "[", 
-     "\"\</Users/questuser/Documents/Kathryn/quest_link\>\"", "]"}], ";", " ", 
-    RowBox[{"(*", 
-     RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
-    "\[IndentingNewLine]", 
+     "\"\</Users/questuser/Documents/Kathryn/quest_link\>\"", "]"}], ";"}], 
+   " ", 
+   RowBox[{"(*", 
+    RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{
     "Import", "[", 
-     "\"\</Users/questuser/Documents/Kathryn/RydbergInstaSWAPGerardCZ.wl\>\"",
-      "]"}], ";", " ", 
-    RowBox[{"(*", 
-     RowBox[{"Configuration", " ", "File"}], "*)"}], "\[IndentingNewLine]", 
+     "\"\</Users/questuser/Documents/Kathryn/RydbergGerardCZDCSWAP.wl\>\"", 
+     "]"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Configuration", " ", "File"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"data", "=", 
      RowBox[{
      "Import", "[", 
       "\"\</Users/questuser/Documents/Kathryn/SU4Gates9Qubits.csv\>\"", 
-      "]"}]}], ";", " ", 
-    RowBox[{"(*", 
-     RowBox[{"Imported", " ", "gates", " ", "from", " ", "Qiskit"}], "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"(*", 
+      "]"}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"Imported", " ", "gates", " ", "from", " ", "Qiskit"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
      RowBox[{
       RowBox[{
-       RowBox[{
-       "Import", "[", 
-        "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\Link\\\\QuESTlink.m\>\"", 
-        "]"}], " ", 
-       RowBox[{"(*", 
-        RowBox[{"QuESTlink", " ", "load"}], "*)"}], "\n", 
-       RowBox[{
-       "CreateLocalQuESTEnv", "[", 
-        "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\quest_link.exe\>\"", 
-        "]"}]}], ";", 
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\Link\\\\QuESTlink.m\>\"", 
+       "]"}], " ", 
       RowBox[{"(*", 
-       RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+       RowBox[{"QuESTlink", " ", "load"}], "*)"}], "\n", 
+      RowBox[{
+      "CreateLocalQuESTEnv", "[", 
+       "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\quest_link.exe\>\"", "]"}]}],
+      ";", 
+     RowBox[{"(*", 
+      RowBox[{"Creating", " ", "QuEST", " ", "environment"}], "*)"}], 
+     RowBox[{
+     "Import", "[", 
+      "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\RydbergInstaSwapGerardCZ.wl\>\
+\"", "]"}], ";", 
+     RowBox[{"(*", 
+      RowBox[{"Configuration", " ", "File"}], "*)"}], 
+     RowBox[{"data", "=", 
       RowBox[{
       "Import", "[", 
-       "\"\<C:\\\\Users\\\\KitKa\\\\QuESTlink\\\\RydbergInstaSwapGerardCZ.wl\>\
-\"", "]"}], ";", 
-      RowBox[{"(*", 
-       RowBox[{"Configuration", " ", "File"}], "*)"}], 
-      RowBox[{"data", "=", 
-       RowBox[{
-       "Import", "[", 
-        "\"\<C:\\\\Users\\\\KitKa\\\\OneDrive\\\\Documents\\\\Wolfram \
+       "\"\<C:\\\\Users\\\\KitKa\\\\OneDrive\\\\Documents\\\\Wolfram \
 Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], "*)"}], 
-    "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"userconfig", "=", 
      RowBox[{"<|", "\[IndentingNewLine]", 
       RowBox[{
@@ -360,8 +364,8 @@ Mathematica\\\\SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], "*)"}],
    3.876598936091878*^9}, {3.8765989780656643`*^9, 3.876598980559504*^9}, {
    3.876834874566763*^9, 3.8768349666916876`*^9}, {3.876837717860126*^9, 
    3.8768377618432245`*^9}, {3.876838123775058*^9, 3.8768381245103426`*^9}, {
-   3.8768408594353733`*^9, 
-   3.876840869958505*^9}},ExpressionUUID->"30d941c4-c74d-4019-8d8c-\
+   3.8768408594353733`*^9, 3.876840869958505*^9}, {3.876841130790636*^9, 
+   3.8768411621258497`*^9}},ExpressionUUID->"30d941c4-c74d-4019-8d8c-\
 c4d11a9d026a"],
 
 Cell[BoxData[
@@ -369,11 +373,16 @@ Cell[BoxData[
     SphereBox[{1, 0, 0}, 0.1], SphereBox[{1, 1, 0}, 0.1], 
     SphereBox[{0, 2, 0}, 0.1], SphereBox[{1, 2, 0}, 0.1], 
     SphereBox[{2, 0, 0}, 0.1], SphereBox[{2, 1, 0}, 0.1], 
-    SphereBox[{2, 2, 0}, 0.1]}, {Text3DBox["0", {0, 0, 0}], 
-    Text3DBox["1", {0, 1, 0}], Text3DBox["2", {1, 0, 0}], 
-    Text3DBox["3", {1, 1, 0}], Text3DBox["4", {0, 2, 0}], 
-    Text3DBox["5", {1, 2, 0}], Text3DBox["6", {2, 0, 0}], 
-    Text3DBox["7", {2, 1, 0}], Text3DBox["8", {2, 2, 0}]}},
+    SphereBox[{2, 2, 0}, 0.1]}, {Text3DBox[
+     FormBox["0", StandardForm], {0, 0, 0}], Text3DBox[
+     FormBox["1", StandardForm], {0, 1, 0}], Text3DBox[
+     FormBox["2", StandardForm], {1, 0, 0}], Text3DBox[
+     FormBox["3", StandardForm], {1, 1, 0}], Text3DBox[
+     FormBox["4", StandardForm], {0, 2, 0}], Text3DBox[
+     FormBox["5", StandardForm], {1, 2, 0}], Text3DBox[
+     FormBox["6", StandardForm], {2, 0, 0}], Text3DBox[
+     FormBox["7", StandardForm], {2, 1, 0}], Text3DBox[
+     FormBox["8", StandardForm], {2, 2, 0}]}},
   ImageSize->500]], "Output",
  CellChangeTimes->{{3.869764201891713*^9, 3.8697642099490824`*^9}, 
    3.869764353200732*^9, 3.869764867445258*^9, {3.8697658404431267`*^9, 
@@ -481,12 +490,12 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"i", ",", "1", ",", 
        RowBox[{"Length", "[", "QubitList", "]"}]}], "}"}]}], "]"}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+  "\[IndentingNewLine]", "\n", "\n", 
   RowBox[{"(*", 
    RowBox[{"Gate", ",", 
     RowBox[{
     "Initialisation", " ", "and", " ", "Measurement", " ", "Errors"}]}], 
-   "*)"}], "\n"}], "\[IndentingNewLine]", 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"SU4Gate", "[", 
@@ -939,6 +948,7 @@ Cell[BoxData[{
         RowBox[{"Print", "[", "PoutcomesNoisy", "]"}], ";"}], "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"InitZeroState", "[", "Reg", "]"}], ";", "\[IndentingNewLine]", 
+      
       RowBox[{"(*", 
        RowBox[{
         RowBox[{"Print", "[", 
@@ -1044,6 +1054,7 @@ Cell[BoxData[{
         RowBox[{"NQ", ",", 
          RowBox[{"MHOP", "\[PlusMinus]", 
           RowBox[{"2", "\[Sigma]"}]}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+      
       RowBox[{"{", 
        RowBox[{"NQ", ",", "2", ",", "MaxNQ", ",", "1"}], "}"}]}], "]"}]}], 
    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -1638,11 +1649,11 @@ In[123]:=",ExpressionUUID->"5d12ee4b-308c-4303-adbb-a7449ce01212"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1140.6, 574.8},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-TaggingRules->Association["TryRealOnly" -> False],
+WindowSize->{1141, 575},
+WindowMargins->{{0, Automatic}, {-62, Automatic}},
+TaggingRules-><|"TryRealOnly" -> False|>,
 Magnification:>0.9 Inherited,
-FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"33754151-c21a-49a6-8d61-5dd1a1518ac2"
 ]
@@ -1658,21 +1669,21 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 17696, 342, 1019, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
-Cell[18279, 366, 3982, 57, 309, "Output",ExpressionUUID->"c1bda623-d7fb-4387-b828-825ef0fa15f0"]
+Cell[580, 22, 17752, 346, 885, "Input",ExpressionUUID->"30d941c4-c74d-4019-8d8c-c4d11a9d026a"],
+Cell[18335, 370, 4223, 62, 311, "Output",ExpressionUUID->"c1bda623-d7fb-4387-b828-825ef0fa15f0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22298, 428, 57095, 1080, 2037, "Input",ExpressionUUID->"0d30743d-14ee-4695-80b8-af268c115cbf"],
+Cell[22595, 437, 57109, 1082, 1810, "Input",ExpressionUUID->"0d30743d-14ee-4695-80b8-af268c115cbf"],
 Cell[CellGroupData[{
-Cell[79418, 1512, 365, 8, 21, "Print",ExpressionUUID->"4768be6c-93f5-47ca-a5e7-789646822c01"],
-Cell[79786, 1522, 363, 8, 21, "Print",ExpressionUUID->"6146455c-ea4d-4a31-be0b-d8faa06e999c"],
-Cell[80152, 1532, 365, 8, 21, "Print",ExpressionUUID->"6c8d16c1-a352-4f28-a17c-5c9e73d5bcf9"],
-Cell[80520, 1542, 365, 8, 21, "Print",ExpressionUUID->"cfa706b7-dcb2-4212-94e3-1e36678de021"],
-Cell[80888, 1552, 363, 8, 21, "Print",ExpressionUUID->"ec695a75-41cb-4ca7-a212-cf5d755ba54a"],
-Cell[81254, 1562, 365, 8, 21, "Print",ExpressionUUID->"be2306bd-58f2-4bda-b3be-fa9230c448a9"],
-Cell[81622, 1572, 363, 8, 21, "Print",ExpressionUUID->"ac73adb9-cf80-48cc-b576-3611de2bd476"],
-Cell[81988, 1582, 363, 8, 21, "Print",ExpressionUUID->"b589075b-7281-4a4a-9978-e23b5f8613f9"],
-Cell[82354, 1592, 1447, 44, 36, "Print",ExpressionUUID->"5d12ee4b-308c-4303-adbb-a7449ce01212"]
+Cell[79729, 1523, 365, 8, 21, "Print",ExpressionUUID->"4768be6c-93f5-47ca-a5e7-789646822c01"],
+Cell[80097, 1533, 363, 8, 21, "Print",ExpressionUUID->"6146455c-ea4d-4a31-be0b-d8faa06e999c"],
+Cell[80463, 1543, 365, 8, 21, "Print",ExpressionUUID->"6c8d16c1-a352-4f28-a17c-5c9e73d5bcf9"],
+Cell[80831, 1553, 365, 8, 21, "Print",ExpressionUUID->"cfa706b7-dcb2-4212-94e3-1e36678de021"],
+Cell[81199, 1563, 363, 8, 21, "Print",ExpressionUUID->"ec695a75-41cb-4ca7-a212-cf5d755ba54a"],
+Cell[81565, 1573, 365, 8, 21, "Print",ExpressionUUID->"be2306bd-58f2-4bda-b3be-fa9230c448a9"],
+Cell[81933, 1583, 363, 8, 21, "Print",ExpressionUUID->"ac73adb9-cf80-48cc-b576-3611de2bd476"],
+Cell[82299, 1593, 363, 8, 21, "Print",ExpressionUUID->"b589075b-7281-4a4a-9978-e23b5f8613f9"],
+Cell[82665, 1603, 1447, 44, 36, "Print",ExpressionUUID->"5d12ee4b-308c-4303-adbb-a7449ce01212"]
 }, Open  ]]
 }, Open  ]]
 }

@@ -134,6 +134,12 @@ SWAPLoc::usage="Swap the locations between the qubits.";
 Init::usage="Initialize qubit to state |0>.";
 \[CapitalOmega]::usage="Drive frequency in Hertz. Can be directly use symbolically in the circuit.";
 CZ::usage="Two-qubit gate \!\(\*SubscriptBox[\(CZ\), \(i, j\)]\)[\[Phi]], the controlled-Z up to single qubit phase \[Phi].";
+CZG::usage="Two-qubit gate \!\(\*SubscriptBox[\(CZ\), \(i, j\)]\), the controlled-Z gate as constructed by Pelegri et. al";
+CZH::usage="Two-qubit gate \!\(\*SubscriptBox[\(CZ\), \(i, j\)]\), the controlled-Z gate as constructed by Levine et al.";
+CCZ::usage="Three-qubit gate \!\(\*SubscriptBox[\(CCZ`),\(i,j,k\)]\), the controlled-controlled-z gate as constructed by Pelegri et. al";
+SWAPDCG::usage="SWAP gate as a decomposition of CZG and single qubit rotations";
+SWAPDCH::usage="SWAP gate as a decomposition of CZH and single qubit rotations";
+InstaSWAP::usage="Perfect and instantaneous SWAP gate";
 FidSWAP::usage="Average fidelity of swap operations in percent. The infidelity will be converted to depolarizing noise.";
 Wait::usage="Wait[\[CapitalDelta]t], doing nothing for duration \[CapitalDelta]t.";
 SRot::usage="Single unitary gate rotation SRot[\[Phi],\[CapitalDelta],t], where \[Phi] is laser phase, \[CapitalDelta] is detuning, and t is laser duration.";
@@ -265,10 +271,25 @@ Subscript[Wait, q__][t_] :>{}
 ,
 Subscript[ShiftLoc, q__][v_]:>{}
 ,
+Subscript[CZG,q1_,q2_]:>Circuit[Subscript[U,q1,q2][{{1,0,0,0},{0,-1,0,0},{0,0,-1,0},{0,0,0,-1}}]]
+,
+Subscript[CZH,q1_,q2_]:>Circuit[Subscript[U,q1,q2][{{1,0,0,0},{0,-1,0,0},{0,0,-1,0},{0,0,0,-1}}]]
+,
+Subscript[SWAPDCG,q1,q2]:>Circuit[Subscript[SWAP,q1,q2]]
+,
+Subscript[SWAPDCH,q1,q2]:>Circuit[Subscript[SWAP,q1,q2]]
 (* multi-control-singleZ *)
 Subscript[C, c_Integer][Subscript[Z, t__Integer][\[Theta]_]]:>Table[Subscript[C, c][Subscript[Z, targ]],{targ,{t}}]
 ,
 Subscript[C, c_Integer][Subscript[Z, t__Integer]]:>Table[Subscript[C, c][Subscript[Z, targ]],{targ,{t}}]
+,
+Subscript[CCZ,c1_,c2_,targ_]:>Subscript[U,c1,c2,targ][{{1,0,0,0,0,0,0,0},{0,-1,0,0,0,0,0,0},{0,0,-1,0,0,0,0,0},{0,0,0,-1,0,0,0,0},{0,0,0,0,-1,0,0,0},{0,0,0,0,0,-1,0,0},{0,0,0,0,0,0,-1,0},{0,0,0,0,0,0,0,-1}}]
+,
+Subscript[SWAPDCG,q1_,q2_]:>Subscript[SWAP,q1,q2]
+,
+Subscript[SWAPDCH,q1_,q2_]:>Subscript[SWAP,q1,q2]
+,
+Subscript[InstaSWAP,q1_,q2_]:>Subscript[SWAP,q1,q2]
 ,
 (* single-control multi-Z*)
 Subscript[C, c__Integer][Subscript[Z, t_Integer][\[Theta]_]]:>{Subscript[C, c][Subscript[Z, t]]}
@@ -337,10 +358,22 @@ GateDuration-> Abs[\[Theta]]/config[\[CapitalOmega]]
 |>
 , 
 (** two-qubit gates **)
-Subscript[SWAP, q1_Integer,q2_Integer]:><|
-NoisyForm-> {Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[KrausNonTP,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q2],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[KrausNonTP,q2,q1][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q2],Subscript[Deph, q2][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[KrausNonTP,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]]}
+Subscript[SWAPDCG, q1_Integer,q2_Integer]:><|
+NoisyForm-> {Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q2],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]]}
 ,
 GateDuration->3.9+4*Pi/config[\[CapitalOmega]]
+|>
+,
+Subscript[SWAPDCH, q1_Integer,q2_Integer]:><|
+NoisyForm-> {Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q2],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]]}
+,
+GateDuration->0.9+4*Pi/config[\[CapitalOmega]]
+|>
+,
+Subscript[InstaSWAP,q1_,q2_]:><|
+NoisyForm->{Subscript[SWAP,q1,q2]}
+,
+GateDuration->0
 |>
 ,
 Subscript[SWAPLoc, q1_Integer,q2_Integer]:> <|
@@ -367,7 +400,24 @@ NoisyForm->{{Subscript[KrausNonTP,p,q][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,
 GateDuration-> 1.3
 |>
 ,
-
+Subscript[CZG, p_Integer,q_Integer]/;blockadeCheck[{p,q}]:><|
+NoisyForm->{{Subscript[UNonNorm,p,q][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}]}}
+,
+GateDuration-> 1.3
+|>
+,
+Subscript[CZH, p_Integer,q_Integer]/;blockadeCheck[{p,q}]:><|
+NoisyForm->{{Subscript[UNonNorm,p,q][{{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}]}}
+,
+GateDuration-> 0.3
+|>
+,
+Subscript[CCZ,i_,j_,k_]/;blockadeCheck[{i,j}]/;blockadeCheck[{j,k}]/;blockadeCheck[{k,i}]:><|
+NoisyForm->{{Subscript[UNonNorm,i,j,k][{{1,0,0,0,0,0,0,0},{0,0.9981*Exp[I*0.9845*Pi],0,0,0,0,0,0},{0,0,0.9981*Exp[I*0.9845*Pi],0,0,0,0,0},{0,0,0,0.9973*Exp[I*0.9934*Pi],0,0,0,0},{0,0,0,0,0.9981*Exp[I*0.9845*Pi],0,0,0},{0,0,0,0,0,0.9973*Exp[I*0.9934*Pi],0,0},{0,0,0,0,0,0,0.9973*Exp[I*0.9934*Pi],0},{0,0,0,0,0,0,0,0.9963*Exp[I*0.9911*Pi]}}]}}
+,
+GateDuration->1.3
+|>
+,
 (* If argument is presented, it acts as gate duration per \[CapitalOmega]  *)
 Subscript[C, c_][Subscript[Z, t__]]/;blockadeCheck[{c,t}]:><|
 NoisyForm->Join[Table[Subscript[C, c][Subscript[Z, targ]],{targ,{t}}], Subscript[KrausNonTP, #][{{{1,0},{0,Sqrt[1-config[LeakProbCZ][11]]}}}]&/@Flatten@{c,t}]
