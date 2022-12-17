@@ -273,7 +273,7 @@ Subscript[ShiftLoc, q__][v_]:>{}
 ,
 Subscript[CZG,q1_,q2_]:>Circuit[Subscript[U,q1,q2][{{1,0,0,0},{0,-1,0,0},{0,0,-1,0},{0,0,0,-1}}]]
 ,
-Subscript[CZH,q1_,q2_]:>Circuit[Subscript[U,q1,q2][{{1,0,0,0},{0,-1,0,0},{0,0,-1,0},{0,0,0,-1}}]]
+Subscript[CZH,q1_,q2_]:>Circuit[Subscript[U,q1,q2][{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,-1}}]]
 ,
 Subscript[SWAPDCG,q1,q2]:>Circuit[Subscript[SWAP,q1,q2]]
 ,
@@ -365,7 +365,7 @@ GateDuration->3.9+4*Pi/config[\[CapitalOmega]]
 |>
 ,
 Subscript[SWAPDCH, q1_Integer,q2_Integer]:><|
-NoisyForm-> {Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q2],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]]}
+NoisyForm-> {Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q2],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][deph\[Alpha][\[Pi]/config[\[CapitalOmega]]]]}
 ,
 GateDuration->0.9+4*Pi/config[\[CapitalOmega]]
 |>
@@ -407,7 +407,7 @@ GateDuration-> 1.3
 |>
 ,
 Subscript[CZH, p_Integer,q_Integer]/;blockadeCheck[{p,q}]:><|
-NoisyForm->{{Subscript[UNonNorm,p,q][{{{1,0,0,0},{0,-0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,-0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}]}}
+NoisyForm->{{Subscript[UNonNorm,p,q][{{{1,0,0,0},{0,0.999320*Exp[I*(2-0.013)*Pi],0,0},{0,0,0.999320*Exp[I*(2-0.013)*Pi],0},{0,0,0,0.999458*Exp[I*0.985*Pi]}}}]}}
 ,
 GateDuration-> 0.3
 |>
