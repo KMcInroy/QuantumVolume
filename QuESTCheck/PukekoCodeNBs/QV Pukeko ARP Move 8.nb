@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126160,       3146]
-NotebookOptionsPosition[    125695,       3129]
-NotebookOutlinePosition[    126175,       3147]
-CellTagsIndexPosition[    126132,       3144]
+NotebookDataLength[    126277,       3147]
+NotebookOptionsPosition[    125812,       3130]
+NotebookOutlinePosition[    126292,       3148]
+CellTagsIndexPosition[    126249,       3145]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,9 +37,9 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"data", "=", 
     RowBox[{"Import", "[", "\"\<SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], 
-  "\[IndentingNewLine]", 
+  "\n", 
   RowBox[{"(*", 
-   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\n", 
+   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SWAPlocations", "=", 
    RowBox[{"Association", "[", 
@@ -232,10 +232,10 @@ Cell[BoxData[{
            "\[IndentingNewLine]", 
            RowBox[{"li", "=", 
             RowBox[{
-             FractionBox[
+             RowBox[{
               RowBox[{"(", 
-               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "2"], "-", "1"}]}],
-            ";", "\[IndentingNewLine]", 
+               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "/", "2"}], "-", 
+             "1"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"OutputLayer", "=", 
             RowBox[{"Flatten", "[", 
              RowBox[{"Join", "[", "\[IndentingNewLine]", 
@@ -671,8 +671,8 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\n", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"SWAPScheduleARP", "[", 
@@ -756,10 +756,10 @@ Cell[BoxData[{
            "\[IndentingNewLine]", 
            RowBox[{"li", "=", 
             RowBox[{
-             FractionBox[
+             RowBox[{
               RowBox[{"(", 
-               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "2"], "-", "1"}]}],
-            ";", "\[IndentingNewLine]", 
+               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "/", "2"}], "-", 
+             "1"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"OutputLayer", "=", 
             RowBox[{"Flatten", "[", 
              RowBox[{"Join", "[", "\[IndentingNewLine]", 
@@ -1195,7 +1195,7 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
+    "]"}]}], "\[IndentingNewLine]", "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"LocTrack", "[", "Nq_", "]"}], ":=", 
   RowBox[{"Range", "[", 
@@ -1232,7 +1232,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Fraction", "[", 
    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
-  FractionBox["a", "b"]}], "\[IndentingNewLine]", 
+  RowBox[{"a", "/", "b"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"KetList", "[", "NQ_", "]"}], ":=", 
   RowBox[{"Table", "[", 
@@ -2987,7 +2987,7 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"Rep", ",", "0", ",", 
        RowBox[{"NReps", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
+  "\[IndentingNewLine]", "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"GateCountUpTo", "[", 
@@ -3084,7 +3084,7 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"MHOP", "-", 
              RowBox[{"2", "\[Sigma]"}]}], ")"}], "]"}], ">", 
-          FractionBox["2", "3"]}], ",", 
+          RowBox[{"2", "/", "3"}]}], ",", 
          RowBox[{"VQ", "=", 
           SuperscriptBox["2", "NQ"]}], ",", 
          RowBox[{"VQ", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
@@ -3095,7 +3095,7 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"MHOPRen", "-", 
              RowBox[{"2", "\[Sigma]Ren"}]}], ")"}], "]"}], ">", 
-          FractionBox["2", "3"]}], ",", 
+          RowBox[{"2", "/", "3"}]}], ",", 
          RowBox[{"VQRen", "=", 
           SuperscriptBox["2", "NQ"]}], ",", 
          RowBox[{"VQRen", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
@@ -3109,7 +3109,7 @@ Cell[BoxData[{
            RowBox[{"2", "\[Sigma]Ren"}]}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{"NQ", ",", "MPLoss", ",", "\[Sigma]PLoss"}], "}"}]}], 
-        "}"}]}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+        "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
  RowBox[{"Uno", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
    RowBox[{
@@ -3117,14 +3117,15 @@ Cell[BoxData[{
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{"\"\<ARPMove8.csv\>\"", ",", 
-   RowBox[{"{", "Uno", "}"}]}], "]"}]}], "Input",
+   RowBox[{"{", "Uno", "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Exit", "[", "]"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.9073842438838587`*^9, 3.9073842548298845`*^9}, {
    3.9073846023884416`*^9, 3.9073846392847033`*^9}, 3.9073849387134175`*^9, {
    3.9073852246513658`*^9, 3.9073852362192364`*^9}, 3.907398335799465*^9, {
    3.9073985755060687`*^9, 3.9073986730790625`*^9}, {3.9073987627983212`*^9, 
-   3.907398763598341*^9}, 
-   3.90740650386626*^9},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
+   3.907398763598341*^9}, 3.90740650386626*^9, {3.9074088956807585`*^9, 
+   3.9074088962490063`*^9}},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
 4553829964ed"]
 },
 WindowSize->{1141.2, 574.8},
@@ -3146,7 +3147,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125133, 3107, 7401, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125250, 3108, 7233, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]

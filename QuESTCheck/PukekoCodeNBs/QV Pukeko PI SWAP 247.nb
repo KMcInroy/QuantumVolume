@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126546,       3154]
-NotebookOptionsPosition[    126081,       3137]
-NotebookOutlinePosition[    126561,       3155]
-CellTagsIndexPosition[    126518,       3152]
+NotebookDataLength[    126808,       3161]
+NotebookOptionsPosition[    126343,       3144]
+NotebookOutlinePosition[    126823,       3162]
+CellTagsIndexPosition[    126780,       3159]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,7 +21,7 @@ Notebook[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"Dir", "=", 
-   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Directory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Import", "[", 
   RowBox[{"StringJoin", "[", 
    RowBox[{"Dir", ",", "\"\<QuESTlink/Link/QuESTlink.m\>\""}], "]"}], 
@@ -37,9 +37,9 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"data", "=", 
     RowBox[{"Import", "[", "\"\<SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], 
-  "\n", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
-   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\[IndentingNewLine]", 
+   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\n", 
  RowBox[{
   RowBox[{"SWAPlocations", "=", 
    RowBox[{"Association", "[", 
@@ -671,8 +671,8 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]", "\n", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"SWAPScheduleARP", "[", 
@@ -3109,30 +3109,37 @@ Cell[BoxData[{
            RowBox[{"2", "\[Sigma]Ren"}]}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{"NQ", ",", "MPLoss", ",", "\[Sigma]PLoss"}], "}"}]}], 
-        "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "}"}]}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{"Uno", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
-   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "2"}],
-    "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "2"}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Dos", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
-   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "4"}],
-    "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "4"}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Tres", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
-   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "7"}],
-    "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "7"}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PIMove247.csv\>\"", ",", 
+  RowBox[{"\"\<PISWAP247.csv\>\"", ",", 
    RowBox[{"{", 
-    RowBox[{"Uno", ",", "Dos", ",", "Tres"}], "}"}]}], "]"}]}], "Input",
+    RowBox[{"Uno", ",", "Dos", ",", "Tres"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Exit", "[", "]"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.9073842438838587`*^9, 3.9073842548298845`*^9}, {
    3.9073846023884416`*^9, 3.9073846392847033`*^9}, 3.9073849387134175`*^9, {
    3.9073852246513658`*^9, 3.9073852362192364`*^9}, 3.907398335799465*^9, {
    3.9073985755060687`*^9, 3.9073987034552965`*^9}, {3.9073992023966007`*^9, 
-   3.9073992793152742`*^9}, 
-   3.907406811270212*^9},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
+   3.907399304817336*^9}, {3.9073993469819517`*^9, 3.9073993716278276`*^9}, {
+   3.907399411485985*^9, 3.9073994199702883`*^9}, 3.9074068468173757`*^9, {
+   3.9074091773385344`*^9, 3.9074091778168955`*^9}, {3.9074092637817*^9, 
+   3.90740927178859*^9}},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
 4553829964ed"]
 },
 WindowSize->{1141.2, 574.8},
@@ -3141,7 +3148,7 @@ TaggingRules->Association["TryRealOnly" -> False],
 Magnification:>1. Inherited,
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"9b7f1db3-a0c5-4b40-9b03-54fb2bca7693"
+ExpressionUUID->"b2b4f810-d95c-4a36-ac08-e0ad0993e291"
 ]
 (* End of Notebook Content *)
 
@@ -3154,7 +3161,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125519, 3115, 7440, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125781, 3122, 7459, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]

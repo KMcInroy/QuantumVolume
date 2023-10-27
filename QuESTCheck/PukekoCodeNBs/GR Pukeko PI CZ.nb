@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37207,        983]
-NotebookOptionsPosition[     36743,        966]
-NotebookOutlinePosition[     37224,        984]
-CellTagsIndexPosition[     37181,        981]
+NotebookDataLength[     37445,        988]
+NotebookOptionsPosition[     36981,        971]
+NotebookOutlinePosition[     37462,        989]
+CellTagsIndexPosition[     37419,        986]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -402,7 +402,7 @@ Cell[BoxData[{
   RowBox[{"(*", 
    RowBox[{
    "Native", " ", "Rydberg", " ", "CCZ", " ", "gate", " ", "decomposed", " ", 
-    "into", " ", "ARP", " ", "CZ", " ", "and", " ", "Native", " ", "Single", 
+    "into", " ", "PI", " ", "CZ", " ", "and", " ", "Native", " ", "Single", 
     " ", "Qubit", " ", "Rotations", " ", 
     RowBox[{"(", "Naively", ")"}]}], "*)"}]}], "\n", 
  RowBox[{
@@ -413,37 +413,37 @@ Cell[BoxData[{
     RowBox[{"{", 
      RowBox[{
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"t", ",", "c1"}]], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", " ", 
       RowBox[{"Tdg", "[", "t", "]"}], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"t", ",", "c2"}]], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
       RowBox[{"TGate", "[", "t", "]"}], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"t", ",", "c1"}]], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
       RowBox[{"Tdg", "[", "t", "]"}], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"t", ",", "c2"}]], ",", 
       RowBox[{"XHXTrans", "[", "t", "]"}], ",", 
       RowBox[{"TGate", "[", "t", "]"}], ",", 
       RowBox[{"TGate", "[", "c1", "]"}], ",", 
       RowBox[{"XHXTrans", "[", "c1", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"c1", ",", "c2"}]], ",", 
       RowBox[{"XHXTrans", "[", "c1", "]"}], ",", 
       RowBox[{"TGate", "[", "c2", "]"}], ",", 
       RowBox[{"Tdg", "[", "c1", "]"}], ",", 
       RowBox[{"XHXTrans", "[", "c1", "]"}], ",", 
-      SubscriptBox["CZARP", 
+      SubscriptBox["CZPI", 
        RowBox[{"c1", ",", "c2"}]], ",", 
       RowBox[{"XHXTrans", "[", "c1", "]"}], ",", "WaitAllQubits"}], "}"}], 
-    "]"}]}], "\n", "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "\n", 
   RowBox[{"(*", 
    RowBox[{"Generate", " ", "empty", " ", "array", " ", "for", " ", 
     SubscriptBox["P", "Total"], " ", "data", " ", "storage"}], "*)"}]}], "\n", 
@@ -458,7 +458,7 @@ Cell[BoxData[{
   "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
-   "Decomposed", " ", "CCZ", " ", "via", " ", "ARP", " ", "CZ", " ", "gate", 
+   "Decomposed", " ", "CCZ", " ", "via", " ", "PI", " ", "CZ", " ", "gate", 
     " ", "Grover", " ", "Oracle", " ", "Generation"}], 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
@@ -577,7 +577,7 @@ Cell[BoxData[{
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
-   "Decomposed", " ", "CCZ", " ", "via", " ", "ARP", " ", "CZ", " ", "gate", 
+   "Decomposed", " ", "CCZ", " ", "via", " ", "PI", " ", "CZ", " ", "gate", 
     " ", "Grover", " ", "Diffusion", " ", "Operator"}], "*)"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -796,9 +796,11 @@ Cell[BoxData[{
            RowBox[{"All", ",", "j"}], "]"}], "]"}]}], "]"}], "\[PlusMinus]", 
        RowBox[{"(", 
         RowBox[{
-         FractionBox["1", 
-          RowBox[{"2", "*", 
-           RowBox[{"Sqrt", "[", "2", "]"}]}]], 
+         RowBox[{"(", 
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"2", "*", 
+             RowBox[{"Sqrt", "[", "2", "]"}]}], ")"}]}], ")"}], 
          RowBox[{"StandardDeviation", "[", 
           RowBox[{
            RowBox[{"Diagonal", "[", 
@@ -836,10 +838,11 @@ Cell[BoxData[{
             RowBox[{"(*", "64", "*)"}], "8"}], "}"}]}], "]"}], "]"}], 
        "\[PlusMinus]", 
        RowBox[{
-        FractionBox["1", 
-         RowBox[{
-          RowBox[{"Sqrt", "[", "8", "]"}], 
-          RowBox[{"(*", "8", "*)"}]}]], 
+        RowBox[{"(", 
+         RowBox[{"1", "/", 
+          RowBox[{
+           RowBox[{"Sqrt", "[", "8", "]"}], 
+           RowBox[{"(*", "8", "*)"}]}]}], ")"}], 
         RowBox[{"StandardDeviation", "[", 
          RowBox[{"Table", "[", 
           RowBox[{
@@ -931,22 +934,23 @@ Cell[BoxData[{
     RowBox[{"{", 
      RowBox[{"i", ",", "1", ",", "4"}], "}"}]}], "]"}]}], "\n", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<LossProp2QARP.csv\>\"", ",", "PLossVaryIt2Q"}], 
+  RowBox[{"\"\<LossProp2QPI.csv\>\"", ",", "PLossVaryIt2Q"}], 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<Raw2QARPAimed.csv\>\"", ",", "GroverDataUnnormVaryIt2Q"}], 
-  "]"}], "\[IndentingNewLine]", 
- RowBox[{"Export", "[", 
-  RowBox[{
-  "\"\<Raw2QARP2nd.csv\>\"", ",", "GroverData2ndHighestUnnormVaryIt2Q"}], 
-  "]"}], "\[IndentingNewLine]", 
- RowBox[{"Export", "[", 
-  RowBox[{"\"\<Renorm2QARPAimed.csv\>\"", ",", "GroverDataRenormVaryIt2Q"}], 
+  RowBox[{"\"\<Raw2QPIAimed.csv\>\"", ",", "GroverDataUnnormVaryIt2Q"}], 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
-  "\"\<Renorm2QARP2nd.csv\>\"", ",", "GroverData2ndHighestRenormVaryIt2Q"}], 
-  "]"}]}], "Input",
+  "\"\<Raw2QPI2nd.csv\>\"", ",", "GroverData2ndHighestUnnormVaryIt2Q"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<Renorm2QPIAimed.csv\>\"", ",", "GroverDataRenormVaryIt2Q"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<Renorm2QPI2nd.csv\>\"", ",", "GroverData2ndHighestRenormVaryIt2Q"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Exit", "[", "]"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{
   3.897983332502434*^9, 3.897983373428712*^9, {3.8979834053677683`*^9, 
@@ -959,8 +963,9 @@ Cell[BoxData[{
    3.8989243782513294`*^9}, {3.8989268847009892`*^9, 
    3.8989269305231113`*^9}, {3.9070525675158253`*^9, 
    3.9070525701949344`*^9}, {3.9074017337163935`*^9, 3.907401749547451*^9}, 
-   3.9074037050316095`*^9, {3.9074041126228237`*^9, 3.9074041127561064`*^9}, 
-   3.9074064785178633`*^9},
+   3.9074037050316095`*^9, {3.9074037750176306`*^9, 3.90740377804766*^9}, {
+   3.907404092090082*^9, 3.9074040922226534`*^9}, 3.9074064899773893`*^9, {
+   3.907408874366252*^9, 3.907408875386359*^9}},
  EmphasizeSyntaxErrors->
   True,ExpressionUUID->"b1128dd9-3f87-4743-834d-c41f48efb46c"]
 },
@@ -970,7 +975,7 @@ TaggingRules->Association["TryRealOnly" -> False],
 Magnification:>0.8 Inherited,
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"0fef8a13-6ec8-4a40-8437-2d6164718b65"
+ExpressionUUID->"d5c2a1f1-0617-45d5-8d80-de97e0ac42c4"
 ]
 (* End of Notebook Content *)
 
@@ -983,7 +988,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 36181, 944, 2075, "Input",ExpressionUUID->"b1128dd9-3f87-4743-834d-c41f48efb46c",
+Cell[558, 20, 36419, 949, 2637, "Input",ExpressionUUID->"b1128dd9-3f87-4743-834d-c41f48efb46c",
  InitializationCell->True]
 }
 ]

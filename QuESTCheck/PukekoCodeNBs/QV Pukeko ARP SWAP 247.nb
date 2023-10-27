@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126762,       3159]
-NotebookOptionsPosition[    126297,       3142]
-NotebookOutlinePosition[    126777,       3160]
-CellTagsIndexPosition[    126734,       3157]
+NotebookDataLength[    126782,       3161]
+NotebookOptionsPosition[    126317,       3144]
+NotebookOutlinePosition[    126797,       3162]
+CellTagsIndexPosition[    126754,       3159]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -232,10 +232,10 @@ Cell[BoxData[{
            "\[IndentingNewLine]", 
            RowBox[{"li", "=", 
             RowBox[{
-             FractionBox[
+             RowBox[{
               RowBox[{"(", 
-               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "2"], "-", "1"}]}],
-            ";", "\[IndentingNewLine]", 
+               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "/", "2"}], "-", 
+             "1"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"OutputLayer", "=", 
             RowBox[{"Flatten", "[", 
              RowBox[{"Join", "[", "\[IndentingNewLine]", 
@@ -756,10 +756,10 @@ Cell[BoxData[{
            "\[IndentingNewLine]", 
            RowBox[{"li", "=", 
             RowBox[{
-             FractionBox[
+             RowBox[{
               RowBox[{"(", 
-               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "2"], "-", "1"}]}],
-            ";", "\[IndentingNewLine]", 
+               RowBox[{"MaxPosi", "-", "MinPosi"}], ")"}], "/", "2"}], "-", 
+             "1"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"OutputLayer", "=", 
             RowBox[{"Flatten", "[", 
              RowBox[{"Join", "[", "\[IndentingNewLine]", 
@@ -1232,7 +1232,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Fraction", "[", 
    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
-  FractionBox["a", "b"]}], "\[IndentingNewLine]", 
+  RowBox[{"a", "/", "b"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"KetList", "[", "NQ_", "]"}], ":=", 
   RowBox[{"Table", "[", 
@@ -3084,7 +3084,7 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"MHOP", "-", 
              RowBox[{"2", "\[Sigma]"}]}], ")"}], "]"}], ">", 
-          FractionBox["2", "3"]}], ",", 
+          RowBox[{"2", "/", "3"}]}], ",", 
          RowBox[{"VQ", "=", 
           SuperscriptBox["2", "NQ"]}], ",", 
          RowBox[{"VQ", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
@@ -3095,7 +3095,7 @@ Cell[BoxData[{
            RowBox[{"(", 
             RowBox[{"MHOPRen", "-", 
              RowBox[{"2", "\[Sigma]Ren"}]}], ")"}], "]"}], ">", 
-          FractionBox["2", "3"]}], ",", 
+          RowBox[{"2", "/", "3"}]}], ",", 
          RowBox[{"VQRen", "=", 
           SuperscriptBox["2", "NQ"]}], ",", 
          RowBox[{"VQRen", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
@@ -3113,31 +3113,33 @@ Cell[BoxData[{
  RowBox[{"Uno", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
    RowBox[{
-   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "3"}], 
+   "data", ",", "9", ",", "200", ",", "\"\<ARPPropSWAP\>\"", ",", "2"}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Dos", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
    RowBox[{
-   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "5"}], 
+   "data", ",", "9", ",", "200", ",", "\"\<ARPPropSWAP\>\"", ",", "4"}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Tres", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
    RowBox[{
-   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "6"}], 
+   "data", ",", "9", ",", "200", ",", "\"\<ARPPropSWAP\>\"", ",", "7"}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PISWAP356.csv\>\"", ",", 
+  RowBox[{"\"\<ARPSWAP247.csv\>\"", ",", 
    RowBox[{"{", 
-    RowBox[{"Uno", ",", "Dos", ",", "Tres"}], "}"}]}], "]"}]}], "Input",
+    RowBox[{"Uno", ",", "Dos", ",", "Tres"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Exit", "[", "]"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.9073842438838587`*^9, 3.9073842548298845`*^9}, {
    3.9073846023884416`*^9, 3.9073846392847033`*^9}, 3.9073849387134175`*^9, {
    3.9073852246513658`*^9, 3.9073852362192364`*^9}, 3.907398335799465*^9, {
    3.9073985755060687`*^9, 3.9073987034552965`*^9}, {3.9073992023966007`*^9, 
    3.907399304817336*^9}, {3.9073993469819517`*^9, 3.9073993716278276`*^9}, {
-   3.9074058419559975`*^9, 3.9074058563185196`*^9}, {3.9074059180437346`*^9, 
-   3.90740592030766*^9}, {3.907406316803367*^9, 3.9074063871719537`*^9}, 
-   3.907406858774603*^9},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
+   3.907399411485985*^9, 3.907399461587304*^9}, 3.907406773726471*^9, {
+   3.907409019384117*^9, 
+   3.90740902014558*^9}},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
 4553829964ed"]
 },
 WindowSize->{1141.2, 574.8},
@@ -3146,7 +3148,7 @@ TaggingRules->Association["TryRealOnly" -> False],
 Magnification:>1. Inherited,
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"a4cf2620-89a5-4bae-8888-2a87cd5e1f87"
+ExpressionUUID->"9f0df772-1674-4135-95fc-c69bb0ae62da"
 ]
 (* End of Notebook Content *)
 
@@ -3159,7 +3161,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125735, 3120, 7440, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125755, 3122, 9463, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]

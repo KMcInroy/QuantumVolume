@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126339,       3148]
-NotebookOptionsPosition[    125874,       3131]
-NotebookOutlinePosition[    126354,       3149]
-CellTagsIndexPosition[    126311,       3146]
+NotebookDataLength[    126652,       3156]
+NotebookOptionsPosition[    126187,       3139]
+NotebookOutlinePosition[    126667,       3157]
+CellTagsIndexPosition[    126624,       3154]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,9 +37,9 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"data", "=", 
     RowBox[{"Import", "[", "\"\<SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], 
-  "\n", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
-   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\[IndentingNewLine]", 
+   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\n", 
  RowBox[{
   RowBox[{"SWAPlocations", "=", 
    RowBox[{"Association", "[", 
@@ -671,7 +671,7 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]", "\n", 
+    "]"}]}], "\n", "\[IndentingNewLine]", 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -1195,7 +1195,7 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\n", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{"LocTrack", "[", "Nq_", "]"}], ":=", 
   RowBox[{"Range", "[", 
@@ -2986,8 +2986,8 @@ Cell[BoxData[{
         RowBox[{"1", "-", "PNoLoss"}]}], "}"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"Rep", ",", "0", ",", 
-       RowBox[{"NReps", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], "\n", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+       RowBox[{"NReps", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"GateCountUpTo", "[", 
@@ -3109,25 +3109,33 @@ Cell[BoxData[{
            RowBox[{"2", "\[Sigma]Ren"}]}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{"NQ", ",", "MPLoss", ",", "\[Sigma]PLoss"}], "}"}]}], 
-        "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "}"}]}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{"Uno", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
-   RowBox[{
-   "data", ",", "9", ",", "200", ",", "\"\<PIPropSWAP\>\"", ",", "8"}], 
-   "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "2"}],
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Dos", "=", 
+  RowBox[{"QVCalcCustOrder", "[", 
+   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "4"}],
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Tres", "=", 
+  RowBox[{"QVCalcCustOrder", "[", 
+   RowBox[{"data", ",", "9", ",", "200", ",", "\"\<PIParMove\>\"", ",", "7"}],
+    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<PISWAP8.csv\>\"", ",", 
-   RowBox[{"{", "Uno", "}"}]}], "]"}]}], "Input",
+  RowBox[{"\"\<PIMove247.csv\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{"Uno", ",", "Dos", ",", "Tres"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Exit", "[", "]"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.9073842438838587`*^9, 3.9073842548298845`*^9}, {
    3.9073846023884416`*^9, 3.9073846392847033`*^9}, 3.9073849387134175`*^9, {
    3.9073852246513658`*^9, 3.9073852362192364`*^9}, 3.907398335799465*^9, {
    3.9073985755060687`*^9, 3.9073987034552965`*^9}, {3.9073992023966007`*^9, 
-   3.907399304817336*^9}, {3.9073993469819517`*^9, 3.9073993716278276`*^9}, {
-   3.907399411485985*^9, 3.907399478214105*^9}, {3.907399531759755*^9, 
-   3.907399599053215*^9}, 3.9074068285498924`*^9},
- EmphasizeSyntaxErrors->
-  True,ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed"]
+   3.9073992793152742`*^9}, 3.907406811270212*^9, {3.9074091008907843`*^9, 
+   3.9074091020293045`*^9}},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
+4553829964ed"]
 },
 WindowSize->{1141.2, 574.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -3135,7 +3143,7 @@ TaggingRules->Association["TryRealOnly" -> False],
 Magnification:>1. Inherited,
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"78757484-9bf0-489d-b8a6-c14178cebd43"
+ExpressionUUID->"9b7f1db3-a0c5-4b40-9b03-54fb2bca7693"
 ]
 (* End of Notebook Content *)
 
@@ -3148,7 +3156,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125312, 3109, 7401, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125625, 3117, 7459, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]
