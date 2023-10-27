@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126478,       3153]
-NotebookOptionsPosition[    126013,       3136]
-NotebookOutlinePosition[    126493,       3154]
-CellTagsIndexPosition[    126450,       3151]
+NotebookDataLength[    126663,       3158]
+NotebookOptionsPosition[    126198,       3141]
+NotebookOutlinePosition[    126678,       3159]
+CellTagsIndexPosition[    126635,       3156]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,9 +22,14 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Dir", "=", 
    RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Import", "[", "\"\<QuESTLink.m\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Import", "[", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"Dir", ",", "\"\<QuESTlink/Link/QuESTlink.m\>\""}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"CreateDownloadedQuESTEnv", "[", "]"}], ";"}], "\n", 
+  RowBox[{"CreateLocalQuESTEnv", "[", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"Dir", ",", "\"\<quest_link\>\""}], "]"}], "]"}], ";"}], "\n", 
  RowBox[{"Get", "[", 
   RowBox[{"StringJoin", "[", 
    RowBox[{"Dir", ",", "\"\<VQD CG V3 Parallel.wl\>\""}], "]"}], "]"}], "\n", 
@@ -666,8 +671,8 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\n", 
+    "]"}]}], "\[IndentingNewLine]", "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"SWAPScheduleARP", "[", 
@@ -1190,7 +1195,7 @@ Cell[BoxData[{
            RowBox[{"{", 
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
+    "]"}]}], "\n", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"LocTrack", "[", "Nq_", "]"}], ":=", 
   RowBox[{"Range", "[", 
@@ -2981,8 +2986,8 @@ Cell[BoxData[{
         RowBox[{"1", "-", "PNoLoss"}]}], "}"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"Rep", ",", "0", ",", 
-       RowBox[{"NReps", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
+       RowBox[{"NReps", "-", "1"}], ",", "1"}], "}"}]}], "]"}]}], "\n", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"GateCountUpTo", "[", 
@@ -3130,8 +3135,8 @@ Cell[BoxData[{
    3.9073852246513658`*^9, 3.9073852362192364`*^9}, 3.907398335799465*^9, {
    3.9073985755060687`*^9, 3.9073987034552965`*^9}, {3.9073992023966007`*^9, 
    3.907399304817336*^9}, {3.9073993469819517`*^9, 3.9073993716278276`*^9}, {
-   3.907399411485985*^9, 
-   3.907399461587304*^9}},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
+   3.907399411485985*^9, 3.907399461587304*^9}, 
+   3.907406773726471*^9},ExpressionUUID->"c8d36eb4-9066-45ba-8cef-\
 4553829964ed"]
 },
 WindowSize->{1141.2, 574.8},
@@ -3153,7 +3158,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125451, 3114, 7440, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125636, 3119, 7440, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]

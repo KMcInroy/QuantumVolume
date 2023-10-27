@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    126154,       3143]
-NotebookOptionsPosition[    125689,       3126]
-NotebookOutlinePosition[    126169,       3144]
-CellTagsIndexPosition[    126126,       3141]
+NotebookDataLength[    126393,       3149]
+NotebookOptionsPosition[    125928,       3132]
+NotebookOutlinePosition[    126408,       3150]
+CellTagsIndexPosition[    126365,       3147]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,9 +22,14 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Dir", "=", 
    RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Import", "[", "\"\<QuESTLink.m\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Import", "[", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"Dir", ",", "\"\<QuESTlink/Link/QuESTlink.m\>\""}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"CreateDownloadedQuESTEnv", "[", "]"}], ";"}], "\n", 
+  RowBox[{"CreateLocalQuESTEnv", "[", 
+   RowBox[{"StringJoin", "[", 
+    RowBox[{"Dir", ",", "\"\<quest_link\>\""}], "]"}], "]"}], ";"}], "\n", 
  RowBox[{"Get", "[", 
   RowBox[{"StringJoin", "[", 
    RowBox[{"Dir", ",", "\"\<VQD CG V3 Parallel.wl\>\""}], "]"}], "]"}], "\n", 
@@ -32,9 +37,9 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"data", "=", 
     RowBox[{"Import", "[", "\"\<SU4Gates9Qubits.csv\>\"", "]"}]}], ";"}], 
-  "\n", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
-   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\[IndentingNewLine]", 
+   RowBox[{"VQD", " ", "Initialisation"}], "*)"}]}], "\n", 
  RowBox[{
   RowBox[{"SWAPlocations", "=", 
    RowBox[{"Association", "[", 
@@ -667,7 +672,7 @@ Cell[BoxData[{
             RowBox[{"LocTracker", ",", "OutputLayer"}], "}"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
     "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"SWAPScheduleARP", "[", 
@@ -3104,7 +3109,7 @@ Cell[BoxData[{
            RowBox[{"2", "\[Sigma]Ren"}]}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{"NQ", ",", "MPLoss", ",", "\[Sigma]PLoss"}], "}"}]}], 
-        "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "}"}]}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{"Uno", "=", 
   RowBox[{"QVCalcCustOrder", "[", 
    RowBox[{
@@ -3120,7 +3125,8 @@ Cell[BoxData[{
    3.9073985755060687`*^9, 3.9073987034552965`*^9}, {3.9073992023966007`*^9, 
    3.907399304817336*^9}, {3.9073993469819517`*^9, 3.9073993716278276`*^9}, {
    3.907399411485985*^9, 3.907399478214105*^9}, {3.907399531759755*^9, 
-   3.907399564607318*^9}},
+   3.907399564607318*^9}, {3.9074057410731792`*^9, 3.9074057973239207`*^9}, 
+   3.907406765336881*^9},
  EmphasizeSyntaxErrors->
   True,ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed"]
 },
@@ -3143,7 +3149,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 125127, 3104, 7401, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
+Cell[558, 20, 125366, 3110, 7401, "Input",ExpressionUUID->"c8d36eb4-9066-45ba-8cef-4553829964ed",
  InitializationCell->True]
 }
 ]
