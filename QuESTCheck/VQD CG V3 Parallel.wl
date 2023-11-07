@@ -1480,8 +1480,10 @@ Begin["`Private`"];
 						]
 						
 						],
-					NoisyForm -> Flatten[circorloss[SWAPLoc, movenoise[#, durmove], #]& /@ {q1, q2}],
-					GateDuration -> durmove
+					(*NoisyForm -> Flatten[circorloss[SWAPLoc, movenoise[#, durmove], #]& /@ {q1, q2}],
+					GateDuration -> durmove*)
+					NoisyForm -> Subscript[SWAPLoc, q1, q2],
+					GateDuration -> 0
 				|>
 				,
 				Subscript[ShiftLoc, q__][v_] /; legshift[{q}, v] :> 
@@ -1540,7 +1542,7 @@ Begin["`Private`"];
 				,
 				Subscript[SWAPDCARP, q1_Integer, q2_Integer] /; blockadecheck[{q1, q2}] :> 
 				<|
-					NoisyForm -> {Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q2],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))]},
+					NoisyForm -> {Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q2],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))]},
 					GateDuration -> 3.9+4*Pi/rabifreq
 				|>
 				,
@@ -1552,7 +1554,7 @@ Begin["`Private`"];
 				,
 				Subscript[SWAPDCARPRL, q1_Integer, q2_Integer] /; blockadecheck[{q1, q2}] :> 
 				<|
-					NoisyForm -> {Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q2],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[SWAP,q1,q2]},
+					NoisyForm -> {Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q2],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q2,q1][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q2],Subscript[Deph, q2][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[UNonNorm,q1,q2][{{1,0,0,0},{0,0.9990*Exp[I*0.9906*Pi],0,0},{0,0,0.9990*Exp[I*0.9906*Pi],0},{0,0,0,0.9986*Exp[I*Pi]}}],Subscript[H, q1],Subscript[Deph, q1][0.5 (1 - E^(-0.5 /(rabifreq t2)))],Subscript[SWAP,q1,q2]},
 					GateDuration -> 3.9+4*Pi/rabifreq
 				|>
 				,
